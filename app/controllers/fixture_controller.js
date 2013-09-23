@@ -21,4 +21,4 @@ var application = {
 };
 
 action('reset', application.reset);
-action('configsPost', application.configsPost);
+action('statusPost', application.statusPost);
