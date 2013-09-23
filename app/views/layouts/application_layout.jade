@@ -3,7 +3,7 @@ html
   head
     title= title
     != stylesheetLinkTag('app/application', 'vendor/bootstrap', 'vendor/bootstrap-responsive')
-    != javascriptIncludeTag('app/application', 'vendor/angular-min', 'vendor/jquery-min', 'vendor/bootstrap')
+    != javascriptIncludeTag('vendor/angular-min', 'vendor/angular-resource-min', 'vendor/jquery-min', 'vendor/bootstrap', 'app/application')
     != csrfMetaTag()
   body
     .navbar

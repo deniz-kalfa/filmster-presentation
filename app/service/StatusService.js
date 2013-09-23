@@ -1,12 +1,16 @@
+var YAML = require('yamljs')
+  , rootDir = require('path').dirname(process.mainModule.filename)
+  , applicationProperties = YAML.load(rootDir + "/application_properties.yaml");
+
 var statusService = function () {
   var statusFunctions = {
     application: function () {
       return [
         {
-          name: "Application",
+          name: "application",
           properties: {
-            appVersion: '0.0.1',
-            commitHash: 'f959331'
+            applicationVersion: applicationProperties.applicationVersion,
+            commitHash: applicationProperties.commitHash
           }
         }
       ];
@@ -14,7 +18,7 @@ var statusService = function () {
     health: function() {
       return [
         {
-          name: "Health",
+          name: "health",
           properties: {
             up: 'OK'
           }

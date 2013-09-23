@@ -5,12 +5,11 @@ var sys = require('sys')
   , writeFile = q.denodeify(require('fs').writeFile)
   , exec = q.denodeify(require('child_process').exec);
 
-
-var properties = {};
+var properties = YAML.load('./application_properties.yaml');
 
 exec("git rev-parse HEAD")
   .then(function(args){
-    properties.gitCommitHash = args[0].trim();
+    properties.commitHash = args[0].trim();
   })
   .then(function(){
     return YAML.stringify(properties);

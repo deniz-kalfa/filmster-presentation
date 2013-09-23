@@ -12,23 +12,6 @@ test-app-ci:
 
 setup-app:
 	npm install
-	git remote add functional01 git@heroku.com:filmster-presentation-func01.git
-	git remote add qa01         git@heroku.com:filmster-presentation-qa01.git
-	git remote add demo01       git@heroku.com:filmster-presentation-demo01.git
-	git remote add stage01      git@heroku.com:filmster-presentation-stage01.git
-	git remote add prod01       git@heroku.com:filmster-presentation-prod01.git
-
-setup-heroku:
-	heroku apps:create --remote functional01 --app filmster-presentation-func01
-	heroku apps:create --remote qa01         --app filmster-presentation-qa01
-	heroku apps:create --remote demo01       --app filmster-presentation-demo01
-	heroku apps:create --remote stage01      --app filmster-presentation-stage01
-	heroku apps:create --remote prod01       --app filmster-presentation-prod01
-	heroku config:add NODE_ENV=functional01  --app filmster-presentation-func01
-	heroku config:add NODE_ENV=qa01          --app filmster-presentation-qa01
-	heroku config:add NODE_ENV=demo01        --app filmster-presentation-demo01
-	heroku config:add NODE_ENV=stage01       --app filmster-presentation-stage01
-	heroku config:add NODE_ENV=prod01        --app filmster-presentation-prod01
 
 .PHONY: no_targets__ list
 no_targets__:

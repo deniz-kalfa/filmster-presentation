@@ -6,12 +6,6 @@
  * @param {Object} params - compound/express webserver initialization params.
  * @returns CompoundJS powered express webserver
  */
-var applicationName = process.env.APPLICATION_NAME || 'filmster-presentation'
-require('strong-agent').profile(
-  '7f9f6a34-84d9-46f9-b3d1-7e4c3dd77512',
-  [applicationName,'Heroku']
-);
-
 var app = module.exports = function getServerInstance(params) {
   params = params || {};
   // specify current dir as default root of server
