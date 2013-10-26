@@ -2,6 +2,6 @@ script: git checkout develop && make test-app-ci
 deploy:
   provider: heroku
   api_key:
-    secure: WrXSVvUwK9jrNla7Ui8OtXsYGLoN5eUAikr8YCXETPg1KBXTSKk/GjDMzbeKeRqIKf3+bDdqcynO1Yba0RoOkAoInTgy4V1fiLFnID7YFnxfWZUuqu3+/S+ZOBgpSDrrGwCE8CnPB2pLKpsQ0hmJqyF1J/EC0qWw9WZxToh3vxA=
+    secure: cjYGFLxeK08RIPNeJxz3oXYXmjg7bHux9M//qETBo4xAVoArij51JacfcjIdfScmEFW84fXZS9FJL9rR1O5HmAri4dygpQBrXn/F08zi/jcq8/SDgfT/cj3PUrcwJCkTkvz5DmFLG65vQlszHhUPAToLF834dIdAqiEj/KQ6kz4=
   app:
     develop: filmster-presentation-func01
